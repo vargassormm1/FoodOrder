@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-
 import CartContext from "./CartContext";
 
 const defaultCartState = {
@@ -34,6 +33,7 @@ const CartProvider = (props) => {
   const removeFromCartHandler = (id) => {
     dispatchCartAction({ type: "REMOVE", item: id });
   };
+
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
